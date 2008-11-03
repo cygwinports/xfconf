@@ -1,0 +1,117 @@
+xfconf
+------------------------------------------
+Xfconf is the new configuration system for Xfce 4.6, replacing the old 
+MCS system that had been present since 4.0.0.
+
+Xfconf is intended to be more general-purpose than MCS ever was, and 
+not even require a GUI for management of settings. Some may consider 
+Xfconf's architecture to be similar to that of gconf, and they wouldn't 
+be completely wrong. However, Xfconf is designed to be much simpler and 
+easier to work with, while still being much more flexible than MCS and 
+providing core Xfce applications and 3rd-party applications an 
+easy-to-use configuration system.
+
+Runtime requirements:
+  cygwin-1.5.25-15
+  glib2-2.16.6-1
+  libdbus-glib_1_2-0.76-1
+  libdbus1_3-1.2.3-1
+  libintl8-0.17-1
+  libxfce4util-4.4.1-1
+
+Build requirements:
+(besides corresponding -devel packages)
+  autoconf2.5-2.61-1
+  automake1.10-1.10.1-1
+  binutils-20080624-2
+  cygport-0.4.3-1
+  gawk-3.1.6-1
+  gcc-core-3.4.4-3
+  libtool-2.2.2-2
+  make-3.81-1
+  pkg-config-0.23a-2
+  sed-4.1.5-2
+  xfce4-dev-tools-4.5.91-1
+
+Canonical website:
+  http://www.xfce.org/
+
+Canonical download:
+  http://www.xfce.org/archive/
+
+-------------------------------------------
+
+Build instructions:
+  unpack xfconf-4.5.91-X-src.tar.bz2
+    if you use setup to install this src package, it will be
+	 unpacked under /usr/src automatically
+  cd /usr/src
+  cygport ./xfconf-4.5.91-X.cygport all
+
+This will create:
+  /usr/src/libxfconf0-devel-4.5.91-X.tar.bz2
+  /usr/src/libxfconf0_0-4.5.91-X.tar.bz2
+  /usr/src/xfconf-4.5.91-X-src.tar.bz2
+  /usr/src/xfconf-4.5.91-X.tar.bz2
+
+-------------------------------------------
+
+Files included in the binary package:
+
+  /usr/bin/xfconf-query.exe
+  /usr/bin/xfconfd.exe
+  /usr/share/dbus-1/services/org.xfce.Xfconf.service
+  /usr/share/doc/xfconf-4.5.91/AUTHORS
+  /usr/share/doc/xfconf-4.5.91/COPYING
+  /usr/share/doc/xfconf-4.5.91/ChangeLog
+  /usr/share/doc/xfconf-4.5.91/INSTALL
+  /usr/share/doc/xfconf-4.5.91/NEWS
+  /usr/share/doc/xfconf-4.5.91/TODO
+  /usr/share/locale/da/LC_MESSAGES/xfconf.mo
+  /usr/share/locale/de/LC_MESSAGES/xfconf.mo
+  /usr/share/locale/fi/LC_MESSAGES/xfconf.mo
+  /usr/share/locale/fr/LC_MESSAGES/xfconf.mo
+  /usr/share/locale/hu/LC_MESSAGES/xfconf.mo
+  /usr/share/locale/pt_BR/LC_MESSAGES/xfconf.mo
+
+(libxfconf0_0)
+  /usr/bin/cygxfconf-0-0.dll
+
+(libxfconf0-devel)
+  /usr/include/xfce4/xfconf-0/xfconf/xfconf-binding.h
+  /usr/include/xfce4/xfconf-0/xfconf/xfconf-channel.h
+  /usr/include/xfce4/xfconf-0/xfconf/xfconf-errors.h
+  /usr/include/xfce4/xfconf-0/xfconf/xfconf-types.h
+  /usr/include/xfce4/xfconf-0/xfconf/xfconf.h
+  /usr/lib/libxfconf-0.dll.a
+  /usr/lib/libxfconf-0.la
+  /usr/lib/pkgconfig/libxfconf-0.pc
+  /usr/share/gtk-doc/html/xfconf/ch01.html
+  /usr/share/gtk-doc/html/xfconf/ch02.html
+  /usr/share/gtk-doc/html/xfconf/ch03.html
+  /usr/share/gtk-doc/html/xfconf/home.png
+  /usr/share/gtk-doc/html/xfconf/index.html
+  /usr/share/gtk-doc/html/xfconf/index.sgml
+  /usr/share/gtk-doc/html/xfconf/left.png
+  /usr/share/gtk-doc/html/xfconf/right.png
+  /usr/share/gtk-doc/html/xfconf/style.css
+  /usr/share/gtk-doc/html/xfconf/up.png
+  /usr/share/gtk-doc/html/xfconf/xfconf-xfconf-backend.html
+  /usr/share/gtk-doc/html/xfconf/xfconf-xfconf-binding.html
+  /usr/share/gtk-doc/html/xfconf/xfconf-xfconf-channel.html
+  /usr/share/gtk-doc/html/xfconf/xfconf-xfconf-errors.html
+  /usr/share/gtk-doc/html/xfconf/xfconf-xfconf-types.html
+  /usr/share/gtk-doc/html/xfconf/xfconf-xfconf.html
+  /usr/share/gtk-doc/html/xfconf/xfconf.devhelp
+  /usr/share/gtk-doc/html/xfconf/xfconf.devhelp2
+
+------------------
+
+Port Notes:
+
+----- version 4.5.91-1 -----
+Initial release for Cygwin.
+
+
+Cygwin port maintained by:
+http://sourceware.org/cygwinports/

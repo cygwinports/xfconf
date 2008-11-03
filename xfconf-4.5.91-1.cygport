@@ -1,0 +1,8 @@
+inherit xfce4
+
+PATCH_URI="4.5.91-xfconf_query-as-needed.patch"
+
+PKG_NAMES="${PN} lib${PN}0_0 lib${PN}0-devel"
+xfconf_CONTENTS="usr/bin/*.exe usr/share/dbus-1/ usr/share/doc/ usr/share/locale/"
+libxfconf0_0_CONTENTS="usr/bin/cygxfconf-0-0.dll"
+libxfconf0_devel_CONTENTS="usr/include usr/lib/ usr/share/gtk-doc/"
