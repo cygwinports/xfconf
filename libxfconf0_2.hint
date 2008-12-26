@@ -1,7 +1,7 @@
 category: Gnome
-requires: cygwin libdbus-glib_1-devel libglib2.0-devel libxfconf0_2
+requires: cygwin libdbus-glib_1_2 libglib2.0_0 xfconf
 external-source: xfconf
-sdesc: "Xfce4 configuration system (libdevel)"
+sdesc: "Xfce4 configuration system (runtime lib)"
 ldesc: "Xfconf is the new configuration system for Xfce 4.6, replacing 
 the old MCS system that had been present since 4.0.0.
 

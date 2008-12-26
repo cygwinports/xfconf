@@ -1,7 +1,7 @@
-category: Gnome
-requires: cygwin glib2 libdbus-glib_1_2 xfconf
+category: Gnome Perl
+requires: cygwin libdbus-glib_1_2 libglib2.0_0 libxfconf0_2 perl perl-Glib
 external-source: xfconf
-sdesc: "Xfce4 configuration system (runtime lib)"
+sdesc: "Xfce4 configuration system (Perl bindings)"
 ldesc: "Xfconf is the new configuration system for Xfce 4.6, replacing 
 the old MCS system that had been present since 4.0.0.
 

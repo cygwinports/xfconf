@@ -1,0 +1,23 @@
+inherit perl xfce4
+
+PATCH_URI="
+	4.5.92-perl-as-needed.patch
+	4.5.92-perl-make-options.patch
+"
+
+PKG_NAMES="${PN} lib${PN}0_2 lib${PN}0-devel perl-Xfce4-Xfconf"
+xfconf_CONTENTS="usr/bin/*.exe usr/share/dbus-1/ usr/share/doc/ usr/share/locale/"
+libxfconf0_2_CONTENTS="usr/bin/cygxfconf-0-2.dll"
+libxfconf0_devel_CONTENTS="usr/include usr/lib/lib* usr/lib/pkgconfig/ usr/share/gtk-doc/"
+perl_Xfce4_Xfconf_CONTENTS="${PERL_VENDORARCH#/} usr/share/man/man3/"
+
+CYGCONF_ARGS="--with-perl-options=INSTALLDIRS=vendor"
+
+src_install() {
+	cd ${B}/xfconf-perl
+	cygmake -f Makefile.perl manifypods
+
+	cd ${B}
+	cyginstall
+	perl_postinst
+}

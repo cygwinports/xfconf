@@ -1,0 +1,11 @@
+--- origsrc/xfconf-4.5.92/xfconf-perl/Makefile.PL.in	2008-11-09 17:03:21.000000000 -0600
++++ src/xfconf-4.5.92/xfconf-perl/Makefile.PL.in	2008-12-25 04:05:17.256125000 -0600
+@@ -79,7 +79,7 @@
+ 
+ our $xfconf = ExtUtils::Depends->new('Xfconf', 'Glib');
+ $xfconf->set_inc($pkgcfg{cflags} . " -I. -Ibuild " . $libxfconf_cflags);
+-$xfconf->set_libs($pkgcfg{libs} . $libxfconf_libs);
++$xfconf->set_libs($libxfconf_libs . " " . $pkgcfg{libs});
+ $xfconf->add_pm('Xfconf.pm' => '$(INST_LIBDIR)/Xfconf.pm');
+ #$xfconf->add_pm('Array.pm' => '$(INST_LIBDIR)/Xfconf/Array.pm');
+ $xfconf->add_xs(@xs_files);
