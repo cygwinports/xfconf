@@ -1,6 +1,7 @@
 category: Gnome
-requires: cygwin libdbus-glib_1_2 libglib2.0_0 libintl8 libxfce4util4 libxfconf0_2
-sdesc: "Xfce4 configuration system (client)"
+requires: cygwin libdbus-glib_1_2 libdbus1_3 libglib2.0_0 libintl8 libxfce4util4
+external-source: xfconf
+sdesc: "Xfce4 configuration system (daemon)"
 ldesc: "Xfconf is the new configuration system for Xfce 4.6, replacing 
 the old MCS system that had been present since 4.0.0.
 
