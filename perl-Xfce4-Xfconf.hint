@@ -1,5 +1,5 @@
 category: Gnome Perl
-requires: cygwin libdbus-glib_1_2 libglib2.0_0 libxfconf0_2 perl perl-Glib
+requires: cygwin libdbus-glib_1_2 libgcc1 libglib2.0_0 libxfconf0_2 perl perl-Glib
 external-source: xfconf
 sdesc: "Xfce4 configuration system (Perl bindings)"
 ldesc: "Xfconf is the new configuration system for Xfce 4.6, replacing 
