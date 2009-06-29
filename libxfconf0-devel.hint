@@ -1,5 +1,5 @@
 category: Gnome
-requires: cygwin libdbus-glib_1-devel libglib2.0-devel libxfconf0_2
+requires: libdbus-glib_1-devel libglib2.0-devel libxfconf0_2
 external-source: xfconf
 sdesc: "Xfce4 configuration system (libdevel)"
 ldesc: "Xfconf is the new configuration system for Xfce 4.6, replacing 
