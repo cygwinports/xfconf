@@ -1,4 +1,4 @@
-category: Gnome Perl
+category: Xfce Perl
 requires: libdbus-glib_1_2 libgcc1 libglib2.0_0 libxfconf0_2 perl perl-Glib
 external-source: xfconf
 sdesc: "Xfce4 configuration system (Perl bindings)"

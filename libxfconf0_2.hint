@@ -1,4 +1,4 @@
-category: Gnome
+category: Xfce
 requires: libdbus-glib_1_2 libgcc1 libglib2.0_0 xfconfd
 external-source: xfconf
 sdesc: "Xfce4 configuration system (runtime lib)"
