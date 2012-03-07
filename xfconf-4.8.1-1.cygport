@@ -4,7 +4,7 @@ PKG_NAMES="${PN} xfconfd lib${PN}0_2 lib${PN}0-devel perl-Xfce4-Xfconf"
 xfconf_CONTENTS="usr/bin/xfconf-query.exe usr/share/doc/ usr/share/locale/"
 xfconfd_CONTENTS="usr/lib/xfce4/xfconf/xfconfd.exe usr/share/dbus-1/"
 libxfconf0_2_CONTENTS="usr/bin/cygxfconf-0-2.dll"
-libxfconf0_devel_CONTENTS="usr/include usr/lib/lib* usr/lib/pkgconfig/ usr/share/gtk-doc/"
+libxfconf0_devel_CONTENTS="usr/include usr/lib/lib* usr/lib/pkgconfig/"
 perl_Xfce4_Xfconf_CONTENTS="${PERL_VENDORARCH#/} usr/share/man/man3/"
 
 DEPS_PATH="${PERL_VENDORARCH}/auto/Glib"
