@@ -1,0 +1,38 @@
+NAME="xfconf"
+VERSION=4.10.0
+RELEASE=2
+inherit perl xfce4
+
+CATEGORY="Libs"
+SUMMARY="Xfce4 configuration system"
+DESCRIPTION="Xfconf is the new configuration system for Xfce 4.6.
+Xfconf is intended to be more general-purpose than its predecessor, and
+not even require a GUI for management of settings. Some may consider
+Xfconf's architecture to be similar to that of gconf, and they would not
+be completely wrong. However, Xfconf is designed to be much simpler and
+easier to work with, while still being flexible and providing core Xfce
+applications and 3rd-party applications an easy-to-use configuration system."
+
+PKG_NAMES="${NAME} xfconfd lib${NAME}0_2 lib${NAME}0-devel perl-Xfce4-Xfconf"
+xfconf_CATEGORY="Xfce"
+xfconf_CONTENTS="usr/bin/xfconf-query.exe usr/share/doc/ usr/share/locale/"
+xfconfd_CATEGORY="Xfce"
+xfconfd_CONTENTS="usr/lib/xfce4/xfconf/xfconfd.exe usr/share/dbus-1/"
+libxfconf0_2_REQUIRES="xfconfd"
+libxfconf0_2_CONTENTS="usr/bin/cygxfconf-0-2.dll"
+libxfconf0_devel_CONTENTS="usr/include usr/lib/lib* usr/lib/pkgconfig/"
+perl_Xfce4_Xfconf_CATEGORY="Perl"
+perl_Xfce4_Xfconf_CONTENTS="${PERL_VENDORARCH#/} usr/share/man/man3/"
+
+DEPS_PATH="${PERL_VENDORARCH}/auto/Glib"
+
+CYGCONF_ARGS="--with-perl-options=INSTALLDIRS=vendor"
+
+src_install() {
+	cd ${B}/xfconf-perl
+	cygmake -f Makefile.perl manifypods
+
+	cd ${B}
+	cyginstall
+	perl_postinst
+}
