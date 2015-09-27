@@ -1,8 +1,8 @@
 inherit perl xfce4
 
 NAME="xfconf"
-VERSION=4.10.0
-RELEASE=3
+VERSION=4.12.0
+RELEASE=1
 CATEGORY="Libs"
 SUMMARY="Xfce4 configuration system"
 DESCRIPTION="Xfconf is the new configuration system for Xfce 4.6.
